@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  font-family: "Space Grotesk";
+  background-color: var(--dark1);
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  text-align: center;
+  --dark1: #151515;
+  --dark2: #242424;
+  --blue: #41439c;
+  --gray: #d9d9d9;
+  --white: #ffffff;
+
+  --size-70: 70px;
+  --size-48: 48px;
+  --size-24: 24px;
+  --size-18: 18px;
+}
+
+img {
+  cursor: pointer;
+}
+
+.imgs {
+  display: contents;
+}
+
+.perfil {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  right: 10rem;
+  width: 250px;
+}
+
+.cursorDefault {
+  cursor: default;
+}
+
+.rings {
+  position: absolute;
+  width: 30rem;
+}
+
+.ring3 {
+  z-index: 1;
+  right: 23rem;
+  top: 28rem;
+  width: 90px;
+}
+
+.ring1 {
+  left: -10rem;
+  top: 5rem;
+}
+
+.ring2 {
+  right: -10rem;
+  top: 48rem;
+}
+
+.introduction {
+  position: relative;
+  z-index: 1000;
+  text-align: start;
+  margin: 0 0 7rem 0;
+  padding: 5rem 0 0;
+  width: 70%;
+  color: white;
+}
+
+.title {
+  font-weight: bold;
+  font-size: var(--size-70);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: var(--size-18);
+  width: 70%;
+  text-align: start;
+  margin-bottom: 2rem;
+}
+
+.contactRequest {
+  cursor: pointer;
+  font-size: var(--size-18);
+  color: white;
+  position: relative;
+  display: inline-block;
+  padding: 0.2em 0;
+  transition: color 0.3s ease;
+}
+
+.contactRequest::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--blue);
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.2s ease;
+  z-index: -1;
+}
+
+.contactRequest:hover {
+  color: white;
+}
+
+.contactRequest:hover::before {
+  transform: scaleY(13);
+}
+
+.divider {
+  margin: auto;
+  background-color: var(--gray);
+  width: 100%;
+  height: 1px;
+}
+
+#name {
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 5px;
+  text-underline-offset: 10px;
+}
+
+.skills {
+  color: var(--white);
+  padding: 5rem 0 0 0;
+  font-size: var(--size-24);
+  gap: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  justify-items: left;
+  align-items: center;
+
+  & > * {
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+}
+
+.titleProjects {
+  margin-top: 8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  position: relative;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding-top: 4rem;
+}
+
+.projectCard {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  height: 100%;
+  display: block;
+  flex-direction: column;
+  background-color: var(--dark1);
+  position: relative;
+}
+
+.content {
+  padding: 0.2rem 8rem;
+}
+
+nav {
+  position: relative;
+  z-index: 10;
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.iconsNav {
+  display: flex;
+  gap: 1rem;
+}
+
+footer {
+  display: flex;
+  margin-top: 8rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 3rem 0rem;
+  gap: 2rem;
+}
+
+.footerText h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--blue);
+}
+
+.footerText p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.linkForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.linkForm h6 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.linkForm img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, opacity 0.2s;
+}
+
+.linkForm img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.iconsNavFooter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.img1 {
+  background-image: url("./assets/projeto1.png");
+}
+.img2 {
+  background-image: url("./assets/projeto2.png");
+}
+.img3 {
+  background-image: url("./assets/projeto3.png");
+}
+.img4 {
+  background-image: url("./assets/projeto4.png");
+}
