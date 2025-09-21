@@ -1,22 +1,20 @@
 import "./App.css";
+import Perfil from "./assets/perfil2.jpg";
+import Rings from "./assets/pattern-rings.svg";
+import Circle from "./assets/pattern-circle.svg";
+import GithubIcon from "./assets/icon-github.svg";
+import LinkedinIcon from "./assets/icon-linkedin.svg";
 
 function App() {
   return (
     <div className="container">
       <div className="content">
-        <img className="perfil cursorDefault" src="src/assets/perfil2.jpg" />
-        <img
-          className="rings ring1 cursorDefault"
-          src="src/assets/pattern-rings.svg"
-        />
-        <img
-          className="rings ring2 cursorDefault"
-          src="src/assets/pattern-rings.svg"
-        />
-        <img
-          className="rings ring3 cursorDefault"
-          src="src/assets/pattern-circle.svg"
-        />
+
+        <img className="perfil cursorDefault" src={Perfil} alt="Perfil" />
+
+        <img className="rings ring1 cursorDefault" src={Rings} alt="Rings 1" />
+        <img className="rings ring2 cursorDefault" src={Rings} alt="Rings 2" />
+        <img className="rings ring3 cursorDefault" src={Circle} alt="Circle" />
 
         <nav>
           <h6>Ruan Valença</h6>
@@ -28,7 +26,7 @@ function App() {
               rel="noopener noreferrer"
               title="Github"
             >
-              <img src="src/assets/icon-github.svg" alt="Github" />
+               <img src={GithubIcon} alt="Github" />
             </a>
 
             <a
@@ -37,7 +35,7 @@ function App() {
               rel="noopener noreferrer"
               title="LinkedIn"
             >
-              <img src="src/assets/icon-linkedin.svg" alt="LinkedIn" />
+              <img src={LinkedinIcon} alt="LinkedIn" />
             </a>
           </div>
         </nav>
@@ -132,7 +130,7 @@ function App() {
               rel="noopener noreferrer"
               title="Github"
             >
-              <img src="src/assets/icon-github.svg" alt="Github" />
+               <img src={GithubIcon} alt="Github" />
             </a>
 
             <a
@@ -141,7 +139,7 @@ function App() {
               rel="noopener noreferrer"
               title="LinkedIn"
             >
-              <img src="src/assets/icon-linkedin.svg" alt="LinkedIn" />
+              <img src={LinkedinIcon} alt="LinkedIn" />
             </a>
           </div>
         </div>
